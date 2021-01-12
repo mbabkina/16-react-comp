@@ -14,7 +14,7 @@ body {
 .contact-number {
   font-size: 0.8rem;
   font-style: italic;
-  opacity: 80%;
+  opacity: 0.8;
   margin-left: 10%;
 }
 
