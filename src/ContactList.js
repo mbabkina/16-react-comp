@@ -50,6 +50,7 @@ class ContactList extends React.Component {
         };
     }
 
+    
         handleSearchChange = async (e) => {
             await this.setState({ search: e.target.value })
             this.applyFilter()
@@ -76,7 +77,7 @@ class ContactList extends React.Component {
                            
                 const filterData = this.state.search.toLowerCase()
                     
-                let filtered = this.state.contactsFiltered.filter(contact =>
+                let filtered = this.state.contacts.filter(contact =>
                     ((contact.gender === 'male') && this.state.isMale) ||
                     ((contact.gender === 'female') && this.state.isFemale) ||
                     ((contact.gender === undefined) && this.state.isNone))
@@ -86,9 +87,9 @@ class ContactList extends React.Component {
                         contact.phone.toLowerCase().includes(filterData))
             
           
-                if (!filterData && (this.state.isMale && this.state.isFemale && this.state.isNone))
+                 if (!filterData && (this.state.isMale && this.state.isFemale && this.state.isNone))
                     filtered = [...contacts]
-              
+               
                 return { contactsFiltered: [...filtered] }
             })
         }
