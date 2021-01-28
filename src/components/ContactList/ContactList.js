@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Contact from './Contact';
+import Contact from '../Contact/Contact';
 import './ContactList.css';
 
 const lightGreyColor = 'rgb(166, 157, 157)'
